@@ -1,0 +1,49 @@
+
+/* Product intro images section start */
+
+.wrap-pic-delicious.size2 img {
+    width: 100%;
+    height: 400px;        
+    object-fit: cover;   
+    border-radius: 10px;  
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+    .wrap-pic-delicious.size2 img {
+        height: 300px;   
+    }
+}
+
+@media (max-width: 576px){
+    .wrap-pic-delicious.size2 img {
+        height: 200px;   
+    }
+}
+
+
+
+
+.wrap-pic-romantic.size2 img {
+    width: 100%;
+    height: 400px;       
+    object-fit: cover;   
+    border-radius: 10px;  
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+    .wrap-pic-romantic.size2 img {
+        height: 300px;   
+    }
+}
+
+@media (max-width: 576px){
+    .wrap-pic-romantic.size2 img {
+        height: 200px;  
+    }
+}
+
+/* Product intro images section End */
