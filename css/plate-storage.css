@@ -14,7 +14,7 @@
   width: 100%;
   height: 100%;
 
-  background: rgba(0, 0, 0, 0.45); 
+  background: rgba(0, 0, 0, 0.1); 
 
   z-index: 1;
 }
@@ -113,4 +113,19 @@
     overflow-x: auto;
     justify-content: flex-start;
   }
+}
+
+
+
+/* product background section start */
+
+.wrap-gallery {
+  background: #f1f1f1;   /* halka gray */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Active product link */
+.product-dropdown a.active {
+  color: #ec1d25;
+  font-weight: 500;
 }

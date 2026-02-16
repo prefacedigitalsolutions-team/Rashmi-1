@@ -47,3 +47,126 @@
 }
 
 /* Product intro images section End */
+
+
+
+
+
+
+
+
+
+/* pdf section start*/
+
+.pdf-download-section {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pdf-heading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #001652;
+  margin-bottom: 6px;
+}
+
+.pdf-description {
+  font-size: 20px;
+  color: #666;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* Simple card – NO hover, NO shadow */
+.pdf-card {
+  padding: 10px;
+}
+
+/* Title */
+.pdf-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Image  */
+
+.pdf-thumb {
+  width: 100%;
+  height: 250px;         
+  object-fit: cover;      
+  object-position: top;   
+  display: block;
+  border: none;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+
+/* Button */
+.pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  background-color: #003975;
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* PDF icon */
+.pdf-icon {
+  color: #e63946;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pdf-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .pdf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-heading {
+    font-size: 24px;
+  }
+
+  .pdf-description {
+    font-size: 14px;
+  }
+}
+
+/* ===== Scroll Animation ===== */
+
+/* Initial hidden state */
+.pdf-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+/* When visible */
+.pdf-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}

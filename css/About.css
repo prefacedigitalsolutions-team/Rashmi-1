@@ -1,0 +1,87 @@
+
+
+.bg-title-page {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 80px;  
+}
+
+.bg-title-page h2 {
+  text-align: right;
+  
+  transform: translateY(-70px);
+}
+
+
+/* ================= About Intro Section ================= */
+
+.bg1-pattern {
+  padding-top: 40px;
+  padding-bottom: 105px;
+}
+
+/* LEFT TEXT COLUMN */
+.wrap-text-delicious {
+  text-align: left !important;
+  max-width: 95%;
+  margin-top: -40px;
+}
+
+.wrap-text-delicious .tit2,
+.wrap-text-delicious .tit3,
+.wrap-text-delicious p {
+  text-align: left !important;
+}
+
+.wrap-text-delicious .tit3 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  margin-top: 0;
+  color: #111;
+}
+
+.wrap-text-delicious p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+/* ================= IMAGE SIDE ================= */
+
+.wrap-pic-delicious {
+  position: relative;
+  margin-top: 80px;
+  right: -30px;          /* 👈 image ko right side push */
+}
+
+/* Image styling */
+.wrap-pic-delicious img {
+  width: 115%;           /* 👈 ab pakka width badegi */
+  height: 500px !important;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 768px) {
+
+  .wrap-text-delicious {
+    margin-top: 0;
+  }
+
+  .wrap-pic-delicious {
+    right: 0;
+    margin-top: 30px;
+  }
+
+  .wrap-pic-delicious img {
+    width: 100%;
+    height: auto;
+  }
+}

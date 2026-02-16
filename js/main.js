@@ -195,3 +195,99 @@
     
 
 })(jQuery);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var toggle = document.querySelector(".mobile-toggle");
+    var menu = document.querySelector(".wrap_menu");
+    var productLink = document.querySelector(".has-product-dropdown > a");
+    var productItem = document.querySelector(".has-product-dropdown");
+
+    if (toggle) {
+        toggle.addEventListener("click", function () {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("open");
+        });
+    }
+
+    if (productLink) {
+        productLink.addEventListener("click", function (e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                productItem.classList.toggle("open");
+            }
+        });
+    }
+
+});
+
+
+
+
+
+
+
+// nav bar section start
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const mainDropdowns = document.querySelectorAll(".has-product-dropdown");
+
+  mainDropdowns.forEach(dropdown => {
+
+    const trigger = dropdown.querySelector(":scope > a");
+
+    if (!trigger) return;
+
+    // MAIN DROPDOWN CLICK
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      // Close other dropdowns
+      mainDropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+
+      dropdown.classList.toggle("open");
+    });
+
+    // SUB DROPDOWN CLICK
+    const subDropdowns = dropdown.querySelectorAll(".has-sub-dropdown");
+
+    subDropdowns.forEach(sub => {
+      const subTrigger = sub.querySelector(":scope > a");
+      if (!subTrigger) return;
+
+      subTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Close sibling sub dropdowns
+        subDropdowns.forEach(s => {
+          if (s !== sub) s.classList.remove("open");
+        });
+
+        sub.classList.toggle("open");
+      });
+    });
+
+  });
+
+  // CLICK OUTSIDE CLOSE
+  document.addEventListener("click", function () {
+    document.querySelectorAll(".has-product-dropdown.open, .has-sub-dropdown.open")
+      .forEach(el => el.classList.remove("open"));
+  });
+
+});
+
+
+// toogle buttons 
+
