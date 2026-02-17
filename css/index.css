@@ -464,11 +464,9 @@
 
 
 
-/* ============================= */
-/* Banner Section Start */
-/* ============================= */
+/* Banar section start */
 
-/* Remove dots completely */
+
 .slick-dots,
 .slick-dots li,
 .slick-dots li button,
@@ -500,7 +498,7 @@
 .item-slick1 {
     position: relative;
     width: 100% !important;
-    min-height: 75vh;
+    min-height: 55vh;
     background-size: cover;
     background-position: center;
     display: flex !important;
@@ -531,57 +529,128 @@
 }
 
 
-/* ============================= */
-/* Tablet */
-/* ============================= */
+/*Hide banar section */
 
-@media (max-width: 768px) {
-
-    .item-slick1 {
-        min-height: 65vh;
-    }
-
-    .wrap-content-slide1 {
-        padding: 90px 20px !important;
-        text-align: center;
-    }
-
-    .caption1-slide1 {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .caption2-slide1 {
-        font-size: 26px;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-
-    .btn1 {
-        width: 150px;
-        height: 42px;
-        font-size: 14px;
+@media (max-width: 480px) {
+    .section-slide {
+        display: none !important;
     }
 }
 
-/* ============================= */
-/* Small Mobile */
-/* ============================= */
+
+/* Hide banar section */
+.rashmi-banner {
+    display: none;
+}
+
+
+
+/* Mobile new banar */
+
+
+
+
+/* =============================== */
+/* RASHMI PREMIUM FADE HERO */
+/* =============================== */
+
+.rashmi-banner {
+    display: none;
+}
 
 @media (max-width: 480px) {
 
-    .item-slick1 {
-        min-height: 60vh;
+    .rashmi-banner {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
     }
 
-    .caption2-slide1 {
-        font-size: 22px;
+    .rashmi-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
-    .wrap-content-slide1 {
-        padding: 70px 15px !important;
+    .rashmi-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+    }
+
+    .rashmi-slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    /* Premium dark gradient overlay */
+    .rashmi-slide::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.2)
+        );
+        z-index: 1;
+    }
+
+    .rashmi-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        padding: 20px;
+
+        opacity: 0;
+        transform: translateY(25px);
+        transition: all 0.9s ease;
+    }
+
+    .rashmi-slide.active .rashmi-content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Smaller elegant text */
+    .rashmi-title {
+        font-size: 59px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .rashmi-text {
+        font-size: 43px;
+        line-height: 1.6;
+        opacity: 0.95;
+        color: #ffffff;
+    }
+
+    /* Background Images */
+    .rashmi-slide-1 {
+        background-image: url("../images/Home/Banar-home-11.jpg");
+    }
+
+    .rashmi-slide-2 {
+        background-image: url("../images/Home/Home-Banar-22.jpg");
+    }
+
+    .rashmi-slide-3 {
+        background-image: url("../images/Home/Home-Banar-33.jpg");
     }
 }
+
+
 
  /* Banar section End*/
 

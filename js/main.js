@@ -226,68 +226,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-// nav bar section start
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
-  const mainDropdowns = document.querySelectorAll(".has-product-dropdown");
+  const mobileToggle = document.getElementById("mobileToggle");
+  const menuWrap = document.querySelector(".wrap_menu");
 
-  mainDropdowns.forEach(dropdown => {
+  if (!mobileToggle || !menuWrap) return;
 
-    const trigger = dropdown.querySelector(":scope > a");
+  const productItems = document.querySelectorAll(".has-product-dropdown");
+  const subItems = document.querySelectorAll(".has-sub-dropdown");
 
-    if (!trigger) return;
+  /* =============================
+     MOBILE MENU TOGGLE
+  ============================= */
+  mobileToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    mobileToggle.classList.toggle("active");
+    menuWrap.classList.toggle("active");
+  });
 
-    // MAIN DROPDOWN CLICK
-    trigger.addEventListener("click", function (e) {
+  /* =============================
+     PRODUCT DROPDOWN (ALL DEVICES)
+  ============================= */
+  productItems.forEach(item => {
+    const link = item.querySelector(":scope > a");
+    if (!link) return;
+
+    link.addEventListener("click", function (e) {
+
       e.preventDefault();
       e.stopPropagation();
 
-      // Close other dropdowns
-      mainDropdowns.forEach(d => {
-        if (d !== dropdown) d.classList.remove("open");
+      productItems.forEach(i => {
+        if (i !== item) i.classList.remove("open");
       });
 
-      dropdown.classList.toggle("open");
+      item.classList.toggle("open");
     });
-
-    // SUB DROPDOWN CLICK
-    const subDropdowns = dropdown.querySelectorAll(".has-sub-dropdown");
-
-    subDropdowns.forEach(sub => {
-      const subTrigger = sub.querySelector(":scope > a");
-      if (!subTrigger) return;
-
-      subTrigger.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Close sibling sub dropdowns
-        subDropdowns.forEach(s => {
-          if (s !== sub) s.classList.remove("open");
-        });
-
-        sub.classList.toggle("open");
-      });
-    });
-
   });
 
-  // CLICK OUTSIDE CLOSE
-  document.addEventListener("click", function () {
-    document.querySelectorAll(".has-product-dropdown.open, .has-sub-dropdown.open")
-      .forEach(el => el.classList.remove("open"));
+  /* =============================
+     SUB DROPDOWN (ALL DEVICES)
+  ============================= */
+  subItems.forEach(sub => {
+    const subLink = sub.querySelector(":scope > a");
+    if (!subLink) return;
+
+    subLink.addEventListener("click", function (e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      subItems.forEach(s => {
+        if (s !== sub) s.classList.remove("open");
+      });
+
+      sub.classList.toggle("open");
+    });
+  });
+
+  /* =============================
+     OUTSIDE CLICK CLOSE (ALL DEVICES)
+  ============================= */
+  document.addEventListener("click", function (e) {
+
+    const insideMenu = e.target.closest(".wrap_menu");
+    const isToggle = e.target.closest("#mobileToggle");
+
+    if (!insideMenu && !isToggle) {
+
+      productItems.forEach(i => i.classList.remove("open"));
+      subItems.forEach(s => s.classList.remove("open"));
+
+      mobileToggle.classList.remove("active");
+      menuWrap.classList.remove("active");
+    }
   });
 
 });
-
-
-// toogle buttons 
-
