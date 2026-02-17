@@ -549,11 +549,6 @@
 
 
 
-
-/* =============================== */
-/* RASHMI PREMIUM FADE HERO */
-/* =============================== */
-
 .rashmi-banner {
     display: none;
 }
@@ -624,16 +619,19 @@
 
     /* Smaller elegant text */
     .rashmi-title {
-        font-size: 59px;
+        font-size: 49px;
         font-weight: 600;
         margin-bottom: 10px;
+        font-style: italic;
+        letter-spacing: 1px;
     }
 
     .rashmi-text {
-        font-size: 43px;
+        font-size: 53px;
         line-height: 1.6;
         opacity: 0.95;
         color: #ffffff;
+        font-weight: 600;
     }
 
     /* Background Images */
