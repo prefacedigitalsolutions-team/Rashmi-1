@@ -73,21 +73,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 <div class="product-dropdown">
 
                   <!-- Left Column -->
-                  <div class="product-col left-col">
+                   <div class="product-col left-col">
                     <a href="plate-storage.html">Plate Storage solutions</a>
-                    <a href="#">Catering Storage Racks</a>
-                    <a href="#">Racks Plastic Dish Washer</a>
-                    <a href="#">Bottle Storage Racks</a>
-                    <a href="#">Movment Trollies</a>
+                    <a href="Catering-Storage.html">Catering Storage Racks</a>
+                    <a href="Racks-Plastic.html">Racks Plastic Dish Washer</a>
+                    <a href="Racks-Coated.html">Racks Plastic Coated</a>
+                    <a href="Bottle-Storage.html">Bottle Storage Racks</a>
 
                     <!-- 6th item heading -->
                     <div class="has-sub-dropdown clickable">
                       <a href="#">More Options ▸</a>
                       <div class="sub-dropdown">
-                        <a href="#">Cutlery solutions</a>
-                        <a href="#">Fryer Baskets</a>
-                        <a href="#">Storage Trolley</a>
-                        <a href="#">Fruit Veditable Basket</a>
+                        <a href="Movment-Trollies.html">Movment Trollies</a>
+                        <a href="Cutlery-solutions.html">Cutlery solutions</a>
+                        <a href="Fryer-Baskets.html">Fryer Baskets</a>
+                        <a href="Fruit-Veditable.html">Fruit Vegitable Basket</a>
                         
                       </div>
                     </div>
@@ -107,9 +107,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   </div>
 </header>
 
+<!-- Nav bar section End -->
 
 
-	<!-- Title Page -->
+
+
+
+	<!-- Intro section start  Vision and mission -->
+
 	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(images/Home/About-banar-11.jpg);">
 		<h2 class="tit6 t-center">
 			Excellence<br> In Quality
@@ -148,11 +153,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 						<p class="t-center m-b-22 size3 m-l-r-auto">
 						 
-Established in 1991, Rashmi Plasticoat Industries is a trusted name in the hospitality and food service equipment industry, recognized for its consistent quality, functional design, and long-standing market presence. Headquartered in Delhi NCR, the company has built a strong reputation as a leading manufacturer of dish washing racks, glass washing racks, multi-utility wire racks, and imported storage solutions, catering to commercial kitchens across India.<br><br>
+              Established in 1991, Rashmi Plasticoat Industries is a trusted name in the hospitality and food service equipment industry, recognized for its consistent quality, functional design, and long-standing market presence. Headquartered in Delhi NCR, the company has built a strong reputation as a leading manufacturer of dish washing racks, glass washing racks, multi-utility wire racks, and imported storage solutions, catering to commercial kitchens across India.<br><br>
 
-Over the years, Rashmi Plasticoat Industries has demonstrated a strong commitment to product durability, operational efficiency, and industry-relevant innovation. Its offerings are widely used in hotels, restaurants, institutional kitchens, catering units, and food service establishments, where reliability and hygiene are critical.<br><br>
+                 Over the years, Rashmi Plasticoat Industries has demonstrated a strong commitment to product durability, operational efficiency, and industry-relevant innovation. Its offerings are widely used in hotels, restaurants, institutional kitchens, catering units, and food service establishments, where reliability and hygiene are critical.<br><br>
 
-Backed by years of manufacturing expertise and a deep understanding of industry needs, Rashmi Plasticoat Industries has achieved steady growth through customer trust, repeat partnerships, and consistent product performance. The company continues to evolve by expanding its product portfolio and maintaining strict quality benchmarks, ensuring dependable solutions for modern commercial kitchens.
+                Backed by years of manufacturing expertise and a deep understanding of industry needs, Rashmi Plasticoat Industries has achieved steady growth through customer trust, repeat partnerships, and consistent product performance. The company continues to evolve by expanding its product portfolio and maintaining strict quality benchmarks, ensuring dependable solutions for modern commercial kitchens.
 
 						</p>
 					</div>
@@ -168,7 +173,31 @@ Backed by years of manufacturing expertise and a deep understanding of industry 
 	</section>
 
 
+  <!-- Intro section End  Vision and mission -->
 
+
+
+
+
+  	<!-- Static section start -->
+
+
+	<section class="section-intro">
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/Home/static-img-2.jpg);">
+			<span class="tit2 p-l-15 p-r-15">
+				
+			</span>
+
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+				Innovative <br>storage solutions
+			</h3>
+		</div>
+
+	<!-- Static section End -->
+
+
+
+  
 <!-- Our client section start-->
 
 
@@ -198,130 +227,111 @@ Backed by years of manufacturing expertise and a deep understanding of industry 
     </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector(".client-track");
-    let position = 0;
-    let speed = 0.9; // 👈 speed control (0.2 slow | 0.5 normal | 1 fast)
-
-    function animate() {
-        position -= speed;
-
-        // jab half content nikal jaye, reset
-        if (Math.abs(position) >= track.scrollWidth / 2) {
-            position = 0;
-        }
-
-        track.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-});
-</script>
-
 <!-- Our client section End-->
-
-<script>
-jQuery(document).ready(function () {
-
-    // Mobile menu toggle
-    jQuery('.mobile-toggle').on('click', function () {
-        jQuery(this).toggleClass('active');
-        jQuery('.wrap_menu').toggleClass('open');
-    });
-
-    // Product dropdown for mobile
-    jQuery('.has-product-dropdown > a').on('click', function (e) {
-
-        if (window.innerWidth <= 991) {
-            e.preventDefault();
-            jQuery(this).parent().toggleClass('open');
-        }
-
-    });
-
-});
-</script>
 	
 
 
 
 
-<!-- Footer section start-->
 
-<footer class="footer-modern">
-  <div class="container">
 
-    <!-- Top Navigation -->
-    <div class="footer-top-nav">
-      
-    </div>
+<!-- FOOTER START -->
 
-    <!-- Middle Section -->
-    <div class="footer-middle">
+<section class="site-footer">
+  <div class="footer-overlay"></div>
 
-      <!-- Products -->
-      <div class="footer-block">
-        <h4>Quick links</h4>
+  <div class="footer-container">
 
-        <div class="product-grid">
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Download</li>
-            <li>Contact us</li>
-          </ul>
+    <!-- COLUMN 1 : BRAND / MAIN LINKS -->
+      <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact us<br><br></a></li>
+      </ul>
 
-          <ul>	
-			<h4>Our Products</h4>
-            <li>Onion Potato Trolley</li>
-            <li>Plate Storage Rack</li>
-            <li>Bowl & Cup Stand</li>
-            <li>Kitchen Storage Trolley</li>
-          </ul>
-        </div>
-      </div>
-	    <div class="footer-block">
-        <h4></h4>
+      <h3>Follow Us</h3>
 
-        <div class="product-grid">
-          <ul>
-            <li>Dish Washer Rack</li>
-            <li>Glass Carry Crate</li>
-            <li>Tea Cup Storage</li>
-            <li>SS 304 Cutlery Stand</li>
-            <li>Frying Basket</li>
-          </ul>
+      <div class="footer-social">
+      <a href="#" class="whatsapp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
 
-		 
-        </div>
-      </div>
+    <a href="#" class="facebook" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
 
-      <!-- Social -->
-      <div class="footer-block footer-social">
-        <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  </div>
+    <a href="#" class="instagram" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
 
-      </div>
-
-    </div>
+    <a href="#" class="youtube" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
   </div>
+    </div>
 
- <!-- Bottom -->
-<div class="footer-bottom">
-  © 2026 RPI | All Rights Reserved  
-  <span class="design-by">Design by <strong>Preface Communication</strong></span>
+
+    <!-- COLUMN 2 : PRODUCTS -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="plate-storage.html">Plate Storage solutions</a></li>
+        <li><a href="Catering-Storage.html">Catering Storage Racks</a></li>
+        <li><a href="Racks-Plastic.html">Racks Plastic Dish Washer</a></li>
+        <li><a href="Racks-Coated.html">Racks Plastic Coated</a></li>
+        <li><a href="Bottle-Storage.html">Bottle Storage Racks</a></li>    
+      </ul>
+    </div>
+
+
+
+    <!-- COLUMN 3 : CONTACT -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="Movment-Trollies.html">Movment Trollies</a></li>
+        <li><a href="Cutlery-solutions.html">Cutlery solutions</a></li>
+        <li><a href="Fryer-Baskets.html">Fryer Baskets</a></li>
+        <li><a href="Fruit-Veditable.html">Fruit Vegitable Basket</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 : SOCIAL -->
+   <div class="footer-col">
+   <h3>Contact us</h3>
+   <ul class="footer-contact">
+        <li><span>▣  42, DLF Industrial Area, Kirti Nagar, New Delhi-110015
+          </span> </li>
+        <li><span>📞</span> +91 9953700055</li>
+        <li><span>📞</span> +91 8447065114</li>
+        <li><span>✉️</span>  info@company.com</li>
+        <li><span>🌐</span>  www.rashmi.com<br><br></li>
+      </ul>
 </div>
 
-</footer>
 
-<!-- Footer section End-->
+</div>
+
+  <!-- BOTTOM BAR -->
+<div class="footer-bottom">
+  © 2025 SKV Glass & Interiors. All Rights Reserved.
+  <span class="design-by">
+    Design by 
+    <a href="https://www.prefacecommunications.com" target="_blank" rel="noopener">
+      Preface Communications
+    </a>
+  </span>
+</div>
+
+</section>
+<!-- FOOTER END -->
+
+
+
 
 
 

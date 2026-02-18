@@ -65,21 +65,22 @@
                 <div class="product-dropdown">
 
                   <!-- Left Column -->
+                  <!-- Left Column -->
                   <div class="product-col left-col">
                     <a href="plate-storage.html">Plate Storage solutions</a>
-                    <a href="#">Catering Storage Racks</a>
-                    <a href="#">Racks Plastic Dish Washer</a>
-                    <a href="#">Bottle Storage Racks</a>
-                    <a href="#">Movment Trollies</a>
+                    <a href="Catering-Storage.html">Catering Storage Racks</a>
+                    <a href="Racks-Plastic.html">Racks Plastic Dish Washer</a>
+                    <a href="Racks-Coated.html">Racks Plastic Coated</a>
+                    <a href="Bottle-Storage.html">Bottle Storage Racks</a>
 
                     <!-- 6th item heading -->
                     <div class="has-sub-dropdown clickable">
                       <a href="#">More Options ▸</a>
                       <div class="sub-dropdown">
-                        <a href="#">Cutlery solutions</a>
-                        <a href="#">Fryer Baskets</a>
-                        <a href="#">Storage Trolley</a>
-                        <a href="#">Fruit Veditable Basket</a>
+                        <a href="Movment-Trollies.html">Movment Trollies</a>
+                        <a href="Cutlery-solutions.html">Cutlery solutions</a>
+                        <a href="Fryer-Baskets.html">Fryer Baskets</a>
+                        <a href="Fruit-Veditable.html">Fruit Vegitable Basket</a>
                         
                       </div>
                     </div>
@@ -99,6 +100,7 @@
   </div>
 </header>
 
+<!-- Nav bar section End -->
 
 
 	
@@ -168,7 +170,7 @@
 
 
 
-	<!-- for mobile-->
+	<!-- for mobile section start banar-->
 
 <!-- Rashmi Animated Mobile Slider -->
 <section class="rashmi-banner">
@@ -281,6 +283,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	</section>
 
     <!-- Intro section start-->
+
+
 
 
 
@@ -474,7 +478,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="client-slider">
         <div class="client-track">
-            <!-- 15 clients (repeat 2 times for smooth loop) -->
+            <!-- 10 clients (repeat 2 times for smooth loop) -->
             <div class="client-logo"><img src="images/Home/logo-2.png" alt="Client 1"></div>
             <div class="client-logo"><img src="images/Home/logo-3.jpg" alt="Client 2"></div>
             <div class="client-logo"><img src="images/Home/logo-4.png" alt="Client 3"></div>
@@ -495,129 +499,106 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const track = document.querySelector(".client-track");
-    let position = 0;
-    let speed = 0.9; // 👈 speed control (0.2 slow | 0.5 normal | 1 fast)
-
-    function animate() {
-        position -= speed;
-
-        // jab half content nikal jaye, reset
-        if (Math.abs(position) >= track.scrollWidth / 2) {
-            position = 0;
-        }
-
-        track.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-});
-</script>
 
 <!-- Our client section End-->
 
-<script>
-jQuery(document).ready(function () {
-
-    // Mobile menu toggle
-    jQuery('.mobile-toggle').on('click', function () {
-        jQuery(this).toggleClass('active');
-        jQuery('.wrap_menu').toggleClass('open');
-    });
-
-    // Product dropdown for mobile
-    jQuery('.has-product-dropdown > a').on('click', function (e) {
-
-        if (window.innerWidth <= 991) {
-            e.preventDefault();
-            jQuery(this).parent().toggleClass('open');
-        }
-
-    });
-
-});
-</script>
 
 
 
+<!-- FOOTER START -->
 
-<!-- Footer section start-->
+<section class="site-footer">
+  <div class="footer-overlay"></div>
 
-<footer class="footer-modern">
-  <div class="container">
+  <div class="footer-container">
 
-    <!-- Top Navigation -->
-    <div class="footer-top-nav">
-      
-    </div>
+    <!-- COLUMN 1 : BRAND / MAIN LINKS -->
+      <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact us<br><br></a></li>
+      </ul>
 
-    <!-- Middle Section -->
-    <div class="footer-middle">
+      <h3>Follow Us</h3>
 
-      <!-- Products -->
-      <div class="footer-block">
-        <h4>Quick links</h4>
+      <div class="footer-social">
+      <a href="#" class="whatsapp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
 
-        <div class="product-grid">
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Download</li>
-            <li>Contact us</li>
-          </ul>
+    <a href="#" class="facebook" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
 
-          <ul>	
-			<h4>Our Products</h4>
-            <li>Onion Potato Trolley</li>
-            <li>Plate Storage Rack</li>
-            <li>Bowl & Cup Stand</li>
-            <li>Kitchen Storage Trolley</li>
-          </ul>
-        </div>
-      </div>
-	    <div class="footer-block">
-        <h4></h4>
+    <a href="#" class="instagram" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
 
-        <div class="product-grid">
-          <ul>
-            <li>Dish Washer Rack</li>
-            <li>Glass Carry Crate</li>
-            <li>Tea Cup Storage</li>
-            <li>SS 304 Cutlery Stand</li>
-            <li>Frying Basket</li>
-          </ul>
-
-		 
-        </div>
-      </div>
-
-      <!-- Social -->
-      <div class="footer-block footer-social">
-        <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  </div>
-
-      </div>
-
-    </div>
+    <a href="#" class="youtube" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
   </div>
+    </div>
 
- <!-- Bottom -->
-<div class="footer-bottom">
-  © 2026 RPI | All Rights Reserved  
-  <span class="design-by">Design by <strong>Preface Communication</strong></span>
+
+    <!-- COLUMN 2 : PRODUCTS -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="plate-storage.html">Plate Storage solutions</a></li>
+        <li><a href="Catering-Storage.html">Catering Storage Racks</a></li>
+        <li><a href="Racks-Plastic.html">Racks Plastic Dish Washer</a></li>
+        <li><a href="Racks-Coated.html">Racks Plastic Coated</a></li>
+        <li><a href="Bottle-Storage.html">Bottle Storage Racks</a></li>    
+      </ul>
+    </div>
+
+
+
+    <!-- COLUMN 3 : CONTACT -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="Movment-Trollies.html">Movment Trollies</a></li>
+        <li><a href="Cutlery-solutions.html">Cutlery solutions</a></li>
+        <li><a href="Fryer-Baskets.html">Fryer Baskets</a></li>
+        <li><a href="Fruit-Veditable.html">Fruit Vegitable Basket</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 : SOCIAL -->
+   <div class="footer-col">
+   <h3>Contact us</h3>
+   <ul class="footer-contact">
+        <li><span>▣  42, DLF Industrial Area, Kirti Nagar, New Delhi-110015
+          </span> </li>
+        <li><span>📞</span> +91 9953700055</li>
+        <li><span>📞</span> +91 8447065114</li>
+        <li><span>✉️</span>  info@company.com</li>
+        <li><span>🌐</span>  www.rashmi.com<br><br></li>
+      </ul>
 </div>
 
-</footer>
 
-<!-- Footer section End-->
+</div>
+
+  <!-- BOTTOM BAR -->
+<div class="footer-bottom">
+  © 2025 SKV Glass & Interiors. All Rights Reserved.
+  <span class="design-by">
+    Design by 
+    <a href="https://www.prefacecommunications.com" target="_blank" rel="noopener">
+      Preface Communications
+    </a>
+  </span>
+</div>
+
+</section>
+<!-- FOOTER END -->
 
 
 

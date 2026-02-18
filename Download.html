@@ -75,19 +75,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                   <!-- Left Column -->
                   <div class="product-col left-col">
                     <a href="plate-storage.html">Plate Storage solutions</a>
-                    <a href="#">Catering Storage Racks</a>
-                    <a href="#">Racks Plastic Dish Washer</a>
-                    <a href="#">Bottle Storage Racks</a>
-                    <a href="#">Movment Trollies</a>
+                    <a href="Catering-Storage.html">Catering Storage Racks</a>
+                    <a href="Racks-Plastic.html">Racks Plastic Dish Washer</a>
+                    <a href="Racks-Coated.html">Racks Plastic Coated</a>
+                    <a href="Bottle-Storage.html">Bottle Storage Racks</a>
 
                     <!-- 6th item heading -->
                     <div class="has-sub-dropdown clickable">
                       <a href="#">More Options ▸</a>
                       <div class="sub-dropdown">
-                        <a href="#">Cutlery solutions</a>
-                        <a href="#">Fryer Baskets</a>
-                        <a href="#">Storage Trolley</a>
-                        <a href="#">Fruit Veditable Basket</a>
+                        <a href="Movment-Trollies.html">Movment Trollies</a>
+                        <a href="Cutlery-solutions.html">Cutlery solutions</a>
+                        <a href="Fryer-Baskets.html">Fryer Baskets</a>
+                        <a href="Fruit-Veditable.html">Fruit Vegitable Basket</a>
                         
                       </div>
                     </div>
@@ -136,7 +136,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 
  <!--pdf download section start-->
-
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -151,33 +150,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   <div class="pdf-grid">
 
     <div class="pdf-card">
-      <h3 class="pdf-title">RPI Catalogue</h3>
+      <h3 class="pdf-title">Rashmi Catalogue</h3>
 
-      <img src="images/Download-contact/Download-Banar.jpg" alt="Fabric Laminated Glass" class="pdf-thumb">
+      <img src="images/Download-contact/Download-Banar.jpg" 
+           alt="Rashmi Catalogue" 
+           class="pdf-thumb">
 
-      <button class="pdf-download-btn"
-        onclick="downloadPDF('pdf/pdf.pdf','Fabric-Laminated-Glass.pdf')">
+      <!-- Direct Download Link -->
+      <a href="images/Home/pdf.pdf" 
+         download="Rashmi-Catalogue.pdf"
+         class="pdf-download-btn">
+
         <i class="fa-solid fa-file-pdf pdf-icon"></i>
         Download
-      </button>
+      </a>
     </div>
-
-
-   
 
   </div>
 </section>
-
-<script>
-function downloadPDF(path, name) {
-  const link = document.createElement("a");
-  link.href = path;
-  link.download = name;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-</script>
 
 <script>
 const pdfCards = document.querySelectorAll('.pdf-card');
@@ -198,89 +188,123 @@ const observer = new IntersectionObserver(
 pdfCards.forEach(card => observer.observe(card));
 </script>
 
-
-<!-- pdf download section End-->
-
 	
 	
+  	<!-- Static section start -->
+
+
+	<section class="section-intro">
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/Home/static-img-2.jpg);">
+			<span class="tit2 p-l-15 p-r-15">
+				
+			</span>
+
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+				Innovative <br>storage solutions
+			</h3>
+		</div>
+
+	<!-- Static section End -->
 
 
 
 
-<!-- Footer section start-->
+<!-- FOOTER START -->
 
-<footer class="footer-modern">
-  <div class="container">
+<section class="site-footer">
+  <div class="footer-overlay"></div>
 
-    <!-- Top Navigation -->
-    <div class="footer-top-nav">
-      
-    </div>
+  <div class="footer-container">
 
-    <!-- Middle Section -->
-    <div class="footer-middle">
+    <!-- COLUMN 1 : BRAND / MAIN LINKS -->
+      <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact us<br><br></a></li>
+      </ul>
 
-      <!-- Products -->
-      <div class="footer-block">
-        <h4>Quick links</h4>
+      <h3>Follow Us</h3>
 
-        <div class="product-grid">
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Download</li>
-            <li>Contact us</li>
-          </ul>
+      <div class="footer-social">
+      <a href="#" class="whatsapp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+      </a>
 
-          <ul>	
-			<h4>Our Products</h4>
-            <li>Onion Potato Trolley</li>
-            <li>Plate Storage Rack</li>
-            <li>Bowl & Cup Stand</li>
-            <li>Kitchen Storage Trolley</li>
-          </ul>
-        </div>
-      </div>
-	    <div class="footer-block">
-        <h4></h4>
+    <a href="#" class="facebook" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
 
-        <div class="product-grid">
-          <ul>
-            <li>Dish Washer Rack</li>
-            <li>Glass Carry Crate</li>
-            <li>Tea Cup Storage</li>
-            <li>SS 304 Cutlery Stand</li>
-            <li>Frying Basket</li>
-          </ul>
+    <a href="#" class="instagram" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
 
-		 
-        </div>
-      </div>
-
-      <!-- Social -->
-      <div class="footer-block footer-social">
-        <h4>Follow Us</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  </div>
-
-      </div>
-
-    </div>
+    <a href="#" class="youtube" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
   </div>
+    </div>
 
- <!-- Bottom -->
-<div class="footer-bottom">
-  © 2026 RPI | All Rights Reserved  
-  <span class="design-by">Design by <strong>Preface Communication</strong></span>
+
+    <!-- COLUMN 2 : PRODUCTS -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="plate-storage.html">Plate Storage solutions</a></li>
+        <li><a href="Catering-Storage.html">Catering Storage Racks</a></li>
+        <li><a href="Racks-Plastic.html">Racks Plastic Dish Washer</a></li>
+        <li><a href="Racks-Coated.html">Racks Plastic Coated</a></li>
+        <li><a href="Bottle-Storage.html">Bottle Storage Racks</a></li>    
+      </ul>
+    </div>
+
+
+
+    <!-- COLUMN 3 : CONTACT -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="Movment-Trollies.html">Movment Trollies</a></li>
+        <li><a href="Cutlery-solutions.html">Cutlery solutions</a></li>
+        <li><a href="Fryer-Baskets.html">Fryer Baskets</a></li>
+        <li><a href="Fruit-Veditable.html">Fruit Vegitable Basket</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 : SOCIAL -->
+   <div class="footer-col">
+   <h3>Contact us</h3>
+   <ul class="footer-contact">
+        <li><span>▣  42, DLF Industrial Area, Kirti Nagar, New Delhi-110015
+          </span> </li>
+        <li><span>📞</span> +91 9953700055</li>
+        <li><span>📞</span> +91 8447065114</li>
+        <li><span>✉️</span>  info@company.com</li>
+        <li><span>🌐</span>  www.rashmi.com<br><br></li>
+      </ul>
 </div>
 
-</footer>
 
-<!-- Footer section End-->
+</div>
+
+  <!-- BOTTOM BAR -->
+<div class="footer-bottom">
+  © 2025 SKV Glass & Interiors. All Rights Reserved.
+  <span class="design-by">
+    Design by 
+    <a href="https://www.prefacecommunications.com" target="_blank" rel="noopener">
+      Preface Communications
+    </a>
+  </span>
+</div>
+
+</section>
+<!-- FOOTER END -->
+
+
 
 
 

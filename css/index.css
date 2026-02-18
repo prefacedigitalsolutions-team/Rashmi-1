@@ -1108,3 +1108,223 @@
         padding-right: 15px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* footer section start*/
+
+.site-footer{
+  position: relative;
+  background: url("../img-1/AboutHeader.jpg") center/cover no-repeat;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Overlay */
+.footer-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 20, 34, 0.90);
+  z-index: 1;
+}
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+.footer-container{
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+.footer-col h3{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p{
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+/* =========================
+   LINKS
+========================= */
+.footer-links,
+.footer-contact{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Contact List Gap */
+.footer-contact li {
+  margin-bottom: 8px;   
+  line-height: 1.6;    
+}
+
+/* Last item ke baad extra gap na aaye */
+.footer-contact li:last-child {
+  margin-bottom: 0;
+}
+
+
+.footer-links li,
+.footer-contact li{
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.footer-links a{
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover{
+  opacity: 1;
+  padding-left: 6px;
+}
+
+/* =========================
+   SOCIAL ICONS – PREMIUM
+========================= */
+.footer-social{
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a{
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+
+  transition: all 0.35s cubic-bezier(.22,1,.36,1);
+}
+
+/* Brand colors */
+.footer-social .whatsapp{ background: rgba(37,211,102,0.25); }
+.footer-social .facebook{ background: rgba(24,119,242,0.25); }
+.footer-social .instagram{
+  background: linear-gradient(
+    45deg,
+    rgba(245,133,41,0.25),
+    rgba(221,42,123,0.25),
+    rgba(129,52,175,0.25)
+  );
+}
+.footer-social .youtube{ background: rgba(255,0,0,0.25); }
+
+/* Hover effect */
+.footer-social a:hover{
+  transform: translateY(-6px) scale(1.08);
+  background: #ffffff;
+  color: #003A66;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+.footer-bottom{
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  background: rgba(0,0,0,0.25);
+  opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .footer-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px){
+  .footer-container{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-social{
+    justify-content: center;
+  }
+}
+.footer-bottom {
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 10px;
+}
+
+.design-by {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.design-by a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.design-by a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .footer-social {
+    justify-content: flex-start;   
+    gap: 12px;                   
+    padding-left: 0;              
+    margin-left: 0;
+  }
+
+  .footer-social a {
+    margin-left: 0;                
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .footer-social {
+    gap: 10px;
+  }
+}
