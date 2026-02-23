@@ -521,7 +521,7 @@
     width: 100%;
     padding: 100px 20px;
 }
-/* 🔥 NEVER PAUSE ANIMATION ON HOVER */
+/*  NEVER PAUSE ANIMATION ON HOVER */
 .section-slide:hover .animated,
 .slick-slider:hover .animated,
 .slick-track:hover .animated {
@@ -1112,6 +1112,11 @@
 
 
 
+@media (max-width: 991px) {
+  #myBtn {
+    display: flex !important;  /* force show in responsive */
+  }
+}
 
 
 
@@ -1121,7 +1126,7 @@
 
 .site-footer{
   position: relative;
-  background: url("../img-1/AboutHeader.jpg") center/cover no-repeat;
+  background: url("") center/cover no-repeat;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;

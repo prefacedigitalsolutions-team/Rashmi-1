@@ -1,5 +1,16 @@
 /* CONTACT SECTION Start */
 
+@media (max-width: 768px) {
+  .bg-title-page {
+    padding-top: 80px !important;
+    padding-bottom: 50px !important;
+    min-height: 320px;
+  }
+
+  .bg-title-page h2 {
+    font-size: 28px;
+  }
+}
 
 .contact-section {
   padding: 80px 15px;

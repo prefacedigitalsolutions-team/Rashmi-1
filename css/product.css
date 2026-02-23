@@ -170,3 +170,34 @@
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 480px) {
+  .bg-title-page {
+    padding-top: 70px !important;
+    padding-bottom: 40px !important;
+    min-height: 280px;
+  }
+}
+
+/* Responsive Height Reduce - Download Banner */
+@media (max-width: 768px) {
+  .bg-title-page {
+    padding-top: 90px !important;
+    padding-bottom: 50px !important;
+    min-height: 320px;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* download intro section start */
+
+@media (max-width: 480px) {
+  .bg2-pattern {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .bg2-pattern .tit3 {
+    font-size: 24px;
+  }
+}
