@@ -367,86 +367,108 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // our client section End
 
+// galary stsem start
 
 
-// product section paragraph change section start
+// ===== gallery.js =====
 
-document.addEventListener("DOMContentLoaded", function () {
+// Wait until DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
-       CLIENT SLIDER (Marquee)
-    ========================== */
-    const track = document.querySelector(".client-track");
+  // ===== Gallery Filter & Stagger Animation =====
+  const buttons    = document.querySelectorAll(".label-gallery");
+  const items      = document.querySelectorAll(".gallery-item");
+  const paragraphs = document.querySelectorAll(".intro-text");
 
-    if (track) {
-        let position = 0;
-        let speed = 0.9; // speed control
+  // initial state
+  items.forEach(item => item.classList.add("show"));
 
-        function animateClients() {
-            position -= speed;
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
 
-            if (Math.abs(position) >= track.scrollWidth / 2) {
-                position = 0;
-            }
+      const filter = btn.dataset.filter;
 
-            track.style.transform = "translateX(" + position + "px)";
-            requestAnimationFrame(animateClients);
+      // ACTIVE BUTTON
+      buttons.forEach(b => b.classList.remove("is-actived"));
+      btn.classList.add("is-actived");
+
+      // IMAGE FILTER WITH ANIMATION
+      items.forEach(item => {
+        const match = filter === "*" || item.matches(filter);
+
+        if (match) {
+          item.style.display = "block";
+          requestAnimationFrame(() => {
+            item.classList.remove("hide");
+            item.classList.add("show");
+          });
+        } else {
+          item.classList.remove("show");
+          item.classList.add("hide");
+
+          // display none after animation
+          setTimeout(() => {
+            item.style.display = "none";
+          }, 400);
         }
+      });
 
-        animateClients();
-    }
+      // PARAGRAPH SWITCH
+      paragraphs.forEach(p => {
+        p.classList.toggle(
+          "active-intro",
+          p.dataset.content === filter
+        );
+      });
+    });
+  });
 
 
-    /* =========================
-       GALLERY FILTER + PARAGRAPH
-    ========================== */
-    const buttons = document.querySelectorAll(".label-gallery");
-    const paragraphs = document.querySelectorAll(".intro-text");
-    const grid = document.querySelector(".isotope-grid");
+  // ===== Simple Lightbox =====
+  const links = document.querySelectorAll('.btn-show-gallery');
+  const lightbox = document.getElementById('simple-lightbox');
+  const lightboxImg = document.getElementById('sl-img');
+  const closeBtn = document.getElementById('sl-close');
+  const prevBtn = document.getElementById('sl-prev');
+  const nextBtn = document.getElementById('sl-next');
 
-    //  Run only if gallery exists on page
-    if (buttons.length && grid && typeof Isotope !== "undefined") {
+  let currentIndex = 0;
 
-        const iso = new Isotope(grid, {
-            itemSelector: ".isotope-item",
-            layoutMode: "fitRows"
-        });
+  function showImage() {
+    lightboxImg.src = links[currentIndex].getAttribute('href');
+  }
 
-        buttons.forEach(button => {
-            button.addEventListener("click", function () {
+  links.forEach((link, index) => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      currentIndex = index;
+      showImage();
+      lightbox.style.display = 'flex';
+    });
+  });
 
-                const filterValue = this.getAttribute("data-filter");
+  closeBtn.onclick = () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  };
 
-                // Active button
-                buttons.forEach(btn => btn.classList.remove("is-actived"));
-                this.classList.add("is-actived");
+  prevBtn.onclick = () => {
+    currentIndex = (currentIndex - 1 + links.length) % links.length;
+    showImage();
+  };
 
-                // Paragraph switch
-                paragraphs.forEach(p => p.classList.remove("active-intro"));
+  nextBtn.onclick = () => {
+    currentIndex = (currentIndex + 1) % links.length;
+    showImage();
+  };
 
-                const activePara = document.querySelector(
-                    '.intro-text[data-content="' + filterValue + '"]'
-                );
+  // ESC + keyboard arrows
+  document.addEventListener('keydown', e => {
+    if(lightbox.style.display !== 'flex') return;
 
-                if (activePara) {
-                    activePara.classList.add("active-intro");
-                }
-
-                // Isotope filter
-                iso.arrange({
-                    filter: filterValue
-                });
-
-            });
-        });
-    }
+    if(e.key === 'Escape') closeBtn.click();
+    if(e.key === 'ArrowLeft') prevBtn.click();
+    if(e.key === 'ArrowRight') nextBtn.click();
+  });
 
 });
-
-
-// product section paragraph change section End
-
-
-
-
-

@@ -79,7 +79,6 @@
 
 /* ===== PARAGRAPH SWITCHING =========== */
 
-
 .gallery-intro{
   max-width: 1000px;
   margin: 0 auto 40px auto;
@@ -114,184 +113,411 @@
     display: block;
 }
 
-/* Overlay only on image */
+
+
+
+/* Gallary section start image */
+
+   
+:root{
+  --octagon-border-pct: 2%;          
+ 
+}
+:root{
+  --octagon-border-color: rgb(0, 102, 255);
+}
+
+.octagon-border{
+  fill: var(--octagon-border-color);
+}
+
+.catering-gallery{
+  padding:60px 20px;
+  background:#eaffea;
+}
+
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:40px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.gallery-item{
+  text-align:center;
+}
+
+/* ==================================================
+   OCTAGON BOX
+   ================================================== */
+.octagon-box{
+  position:relative;
+  width:100%;
+  aspect-ratio:1/1;
+}
+
+/* ==================================================
+   SVG BORDER (FILL-BASED – PERFECT)
+   ================================================== */
+.octagon-svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+/* Outer octagon = border */
+.octagon-border-fill{
+  fill: var(--octagon-border-color);
+}
+
+/* Inner octagon = cut (equal thickness everywhere) */
+.octagon-inner-cut{
+  fill:#ffffff;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(calc(1 - var(--octagon-border-pct)));
+}
+
+/* ==================================================
+   IMAGE AREA
+   ================================================== */
+.img-inner{
+  position:absolute;
+  inset: var(--octagon-border-pct);
+  overflow:hidden;
+  clip-path: polygon(
+    20% 0%, 80% 0%,
+    100% 20%, 100% 80%,
+    80% 100%, 20% 100%,
+    0% 80%, 0% 20%
+  );
+}
+
+.img-inner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition: transform 0.4s ease;
+}
+
+.img-inner:hover img{
+  transform: scale(1.05);
+}
+
+/* ==================================================
+   OVERLAY (FULL COVER – NO GAP)
+   ================================================== */
 .overlay-item-gallery{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position:absolute;
+  inset:0;
+  background:rgba(0, 255, 242, 0.55);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  opacity:0;
+  transition:0.35s ease;
+  clip-path: inherit;
 }
 
-/* Gallery spacing */
-.wrap-gallery{
-  margin-top: 20px;  
+.img-inner:hover .overlay-item-gallery{
+  opacity:1;
 }
 
-/* Product name */
-.product-name{
-    text-align: center;      /* center text */
-    font-size: 18px;
-    font-weight: 500;
-    color: #000000;
-    margin-top: 10px;
-}
-
-/* Bullet before product name */
-.product-name::before{
-    content: "•";
-    font-size: 28px;
-    font-weight: bold;
-    color: #ec1919;
-    display: inline-block;
-    margin-right: 10px;  
-}
-
-
-
-
-
-@media (max-width: 768px){
-  .wrap-label-gallery{
-    overflow-x: auto;
-    justify-content: flex-start;
-  }
-}
-
-
-
-@media (max-width: 576px) {
-
-  /* ===== PAGE BANNER ===== */
-  .bg-title-page{
-    min-height: 220px;
-    padding: 40px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .bg-title-page h2{
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  /* Overlay slightly darker for mobile readability */
-  .bg-title-page::before{
-    background: rgba(0, 0, 0, 0.25);
-  }
-
-  /* ===== FILTER BUTTON WRAP ===== */
-  .wrap-label-gallery{
-    gap: 14px;
-    padding: 0 10px 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .wrap-label-gallery::-webkit-scrollbar{
-    display: none; /* Chrome */
-  }
-
-  /* ===== FILTER BUTTONS ===== */
-  .label-gallery{
-    padding: 10px 18px;
-    font-size: 13px;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  /* ===== INTRO PARAGRAPH ===== */
-  .gallery-intro{
-    margin-bottom: 25px;
-    min-height: auto;
-    padding: 0 10px;
-  }
-
-  .intro-text{
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  /* ===== GALLERY ===== */
-  .wrap-gallery{
-    margin-top: 10px;
-    padding: 0 10px;
-  }
-
-  .item-gallery{
-    width: 100% !important;
-    margin: 0 0 20px 0 !important;
-  }
-
-  .item-gallery img{
-    border-radius: 8px;
-  }
-}
-
-
-/* product background section start */
-
-.wrap-gallery {
-  background: #f1f1f1;   
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-/* Active product link */
-.product-dropdown a.active {
-  color: #ec1d25;
-  font-weight: 500;
-}
-
-
-/* catering-storage section start  */
-
-.overlay-item-gallery{
-    position: absolute;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-    transition: 0.3s ease;
-}
-
-
+/* ==================================================
+   BUTTON
+   ================================================== */
 .btn-show-gallery{
-    font-size: 20px;
-    color: #000000;
-    background: rgba(255, 255, 255, 10);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width:48px;
+  height:48px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  color:#000;
+  text-decoration:none;
 }
 
-
-.gallery-intro{
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 15px;
+/* ==================================================
+   OVERLAY TEXT
+   ================================================== */
+.overlay-item-gallery p{
+  color:#ffffff;
+  font-size:20px;
+  font-weight:500;
+  max-width:80%;
+  text-align:center;
+  opacity:0;
+  transform: translateY(10px);
+  transition:0.35s ease;
 }
 
-.gallery-intro h2{
-    font-size: 32px;
-    font-weight: 5;
-    color: #585858;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+.img-inner:hover .overlay-item-gallery p{
+  opacity:1;
+  transform: translateY(0);
 }
 
-.gallery-intro p{
+/* ==================================================
+   PRODUCT NAME
+   ================================================== */
+.product-name{
+  margin-top:15px;
+  font-size:18px;
+  color:#333;
+}
+.product-desc{
+  margin-top:6px;
+  font-size:16px;
+  line-height:1.6;
+  color:#666;
+  text-align:center;
+}
+
+#simple-lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#simple-lightbox img{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* CLOSE */
+#sl-close{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ARROWS */
+#sl-prev,
+#sl-next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+#sl-prev{ left: 30px; }
+#sl-next{ right: 30px; }
+
+
+
+
+/* ==================================================
+   VERY SMALL DEVICES (0px – 319px)
+   ================================================== */
+@media (max-width: 319px){
+  .catering-gallery{
+    padding: 25px 8px;
+  }
+
+  .gallery-grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-name{
+    font-size: 14px;
+  }
+
+  .product-desc{
+    font-size: 13px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 13px;
+  }
+}
+
+/* ==================================================
+   MOBILE SMALL (320px – 479px)
+   ================================================== */
+@media (min-width: 320px) and (max-width: 479px){
+  .catering-gallery{
+    padding: 30px 10px;
+  }
+
+  .gallery-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-name{
+    font-size: 15px;
+  }
+
+  .product-desc{
+    font-size: 14px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   MOBILE LARGE (480px – 575px)
+   ================================================== */
+@media (min-width: 480px) and (max-width: 575px){
+  .gallery-grid{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .btn-show-gallery{
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
+
+/* ==================================================
+   TABLET PORTRAIT (576px – 767px)
+   ================================================== */
+@media (min-width: 576px) and (max-width: 767px){
+  .catering-gallery{
+    padding: 40px 15px;
+  }
+
+  .gallery-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .product-name{
+    font-size: 16px;
+  }
+
+  .product-desc{
+    font-size: 15px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 16px;
+  }
+}
+
+/* ==================================================
+   TABLET LANDSCAPE (768px – 991px)
+   ================================================== */
+@media (min-width: 768px) and (max-width: 991px){
+  .gallery-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .product-name{
     font-size: 17px;
-    line-height: 1.8;
-    color: #555;
-    max-width: 900px;
-    margin: 0 auto;
+  }
+
+  .product-desc{
+    font-size: 16px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 18px;
+  }
 }
+
+/* ==================================================
+   SMALL LAPTOP (992px – 1199px)
+   ================================================== */
+@media (min-width: 992px) and (max-width: 1199px){
+  .gallery-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+
+  .product-name{
+    font-size: 18px;
+  }
+}
+
+/* ==================================================
+   DESKTOP (1200px – 1399px)
+   ================================================== */
+@media (min-width: 1200px) and (max-width: 1399px){
+  .gallery-grid{
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .product-name{
+    font-size: 19px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 20px;
+  }
+}
+
+/* ==================================================
+   LARGE DESKTOP (1400px – 1999px)
+   ================================================== */
+@media (min-width: 1400px) and (max-width: 1999px){
+  .gallery-grid{
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+
+  .product-name{
+    font-size: 21px;
+  }
+
+  .product-desc{
+    font-size: 18px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 22px;
+  }
+}
+
+/* ==================================================
+   EXTRA LARGE SCREENS (2000px – 2500px)
+   ================================================== */
+@media (min-width: 2000px){
+  .gallery-grid{
+    max-width: 1800px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+  .product-name{
+    font-size: 28px;
+  }
+
+  .product-desc{
+    font-size: 22px;
+  }
+
+  .overlay-item-gallery p{
+    font-size: 26px;
+  }
+}
+
+
+
+/* Gallary section End image */
