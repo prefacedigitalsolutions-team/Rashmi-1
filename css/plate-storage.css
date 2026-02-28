@@ -118,6 +118,12 @@
 
 /* Gallary section start image */
 
+/* Heading aur photo ke beech ka gap kam karne ke liye */
+.section-gallery {
+    padding-top: 60px;   /* upar ka gap kam */
+    padding-bottom: 15px; /* niche ka gap thoda kam */
+}
+
    
 :root{
   --octagon-border-pct: 2%;          
