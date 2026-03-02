@@ -314,7 +314,7 @@
 
 .catering-gallery{
   padding:60px 20px;
-  background:#eaffea;
+  background:#f7f7f7;
 }
 
 .gallery-grid{
@@ -358,14 +358,12 @@
 
 /* IMAGE OUTLINE */
 .img-inner{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  border:1px solid #757575;  
-  border-radius: 5px; 
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1px solid rgba(117,117,117,0.1); 
+  border-radius: 7px;
 }
-
-
 
 
 .img-inner img{
