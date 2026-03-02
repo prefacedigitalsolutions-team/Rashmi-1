@@ -1,3 +1,192 @@
+
+@media (max-width:480px){
+
+  .bg-title-page.p-t-160{
+    padding-top:60px !important;
+  }
+
+  .bg-title-page.p-b-80{
+    padding-bottom:40px !important;
+  }
+
+  .bg-title-page{
+    min-height:380px;      /* banner height kam */
+    background-position:center;
+    background-size:cover;
+  }
+
+  .bg-title-page h2{
+    font-size:22px;
+    line-height:1.2;
+  }
+}
+
+
+
+
+/*
+   INTRO – DIAGONAL SPLIT
+*/
+
+.common-section{
+  position:relative;
+  padding:120px 20px;
+    background:#ee6767;
+  overflow:hidden;
+}
+
+.common-section::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-20%;
+  width:70%;
+  height:100%;
+  background:#111827;
+  transform:skewX(-12deg);
+  z-index:0;
+}
+
+.common-container{
+  position:relative;
+  z-index:1;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.common-heading{
+  font-size:50px;
+  font-weight:900;
+  color:#ffffff;
+  line-height:1.1;
+}
+
+.common-para{
+  font-size:18px;
+  line-height:1.9;
+  color:#dbeafe;
+}
+
+
+/* ---------- Mobile (0 – 575px) ---------- */
+@media (max-width:575px){
+
+  .common-section{
+    padding:60px 15px;
+  }
+
+  /* diagonal shape hide */
+  .common-section::after{
+    display:none;
+  }
+
+  .common-container{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .common-heading{
+    font-size:30px;
+    line-height:1.25;
+  }
+
+  .common-para{
+    font-size:15px;
+    line-height:1.7;
+  }
+}
+
+/* ---------- Tablet (576px – 991px) ---------- */
+@media (min-width:576px) and (max-width:991px){
+
+  .common-section{
+    padding:80px 20px;
+  }
+
+  .common-container{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .common-section::after{
+    right:-35%;
+    width:90%;
+    transform:skewX(-10deg);
+  }
+
+  .common-heading{
+    font-size:36px;
+  }
+
+  .common-para{
+    font-size:17px;
+  }
+}
+
+/* ---------- Desktop (992px – 1399px) ---------- */
+@media (min-width:992px) and (max-width:1399px){
+
+  .common-section{
+    padding:110px 20px;
+  }
+
+  .common-heading{
+    font-size:46px;
+  }
+}
+
+/* ---------- Large Desktop (1400px +) ---------- */
+@media (min-width:1400px){
+
+  .common-section{
+    padding:140px 20px;
+  }
+
+  .common-container{
+    max-width:1400px;
+    gap:80px;
+  }
+
+  .common-heading{
+    font-size:56px;
+  }
+
+  .common-para{
+    font-size:20px;
+  }
+}
+@media (max-width:480px){
+
+  .wrap-label-gallery{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+
+    gap:12px !important;
+    padding-left:15px !important;
+    padding-right:15px !important;
+
+    overflow:visible !important;
+  }
+
+  .label-gallery{
+    width:100% !important;
+    text-align:center !important;
+    font-size:13px !important;
+    padding:10px 6px !important;
+    white-space:normal !important;
+  }
+}
+
+
+
+
+
 .bg-title-page{
   position: relative;
   background-size: cover;
@@ -114,27 +303,13 @@
 }
 
 
+/* ===============================
+   GALLERY SECTION
+================================ */
 
-
-/* Gallary section start image */
-
-/* Heading aur photo ke beech ka gap kam karne ke liye */
-.section-gallery {
-    padding-top: 60px;   /* upar ka gap kam */
-    padding-bottom: 15px; /* niche ka gap thoda kam */
-}
-
-   
-:root{
-  --octagon-border-pct: 2%;          
- 
-}
-:root{
-  --octagon-border-color: rgb(0, 102, 255);
-}
-
-.octagon-border{
-  fill: var(--octagon-border-color);
+.section-gallery{
+  padding-top:60px;
+  padding-bottom:15px;
 }
 
 .catering-gallery{
@@ -142,10 +317,9 @@
   background:#eaffea;
 }
 
-
 .gallery-grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:40px;
   max-width:1000px;
   margin:auto;
@@ -155,71 +329,64 @@
   text-align:center;
 }
 
-/* ==================================================
-   OCTAGON BOX
-   ================================================== */
+/* ===============================
+   IMAGE BOX (SQUARE)
+================================ */
+
 .octagon-box{
   position:relative;
   width:100%;
   aspect-ratio:1/1;
 }
 
-/* ==================================================
-   SVG BORDER (FILL-BASED – PERFECT)
-   ================================================== */
+/* SVG completely unused */
 .octagon-svg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
+  display:none;
 }
 
-/* Outer octagon = border */
-.octagon-border-fill{
-  fill: var(--octagon-border-color);
-}
+/* ===============================
+   IMAGE AREA (NO SHAPE)
+================================ */
 
-/* Inner octagon = cut (equal thickness everywhere) */
-.octagon-inner-cut{
-  fill:#ffffff;
-  transform-box: fill-box;
-  transform-origin: center;
-  transform: scale(calc(1 - var(--octagon-border-pct)));
-}
-
-/* ==================================================
-   IMAGE AREA
-   ================================================== */
 .img-inner{
   position:absolute;
-  inset: var(--octagon-border-pct);
+  inset:0;
   overflow:hidden;
-  clip-path: polygon(
-    20% 0%, 80% 0%,
-    100% 20%, 100% 80%,
-    80% 100%, 20% 100%,
-    0% 80%, 0% 20%
-  );
 }
+
+
+
+/* IMAGE OUTLINE */
+.img-inner{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  border:1px solid #757575;  
+  border-radius: 5px; 
+}
+
+
+
 
 .img-inner img{
   width:100%;
   height:100%;
   object-fit:cover;
-  transition: transform 0.4s ease;
+  transition:transform 0.4s ease;
 }
 
 .img-inner:hover img{
-  transform: scale(1.05);
+  transform:scale(1.05);
 }
 
-/* ==================================================
-   OVERLAY (FULL COVER – NO GAP)
-   ================================================== */
+/* ===============================
+   OVERLAY (SQUARE)
+================================ */
+
 .overlay-item-gallery{
   position:absolute;
   inset:0;
-  background:rgba(0, 255, 242, 0.55);
+  background:rgba(0,255,242,0.55);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -227,16 +394,16 @@
   gap:10px;
   opacity:0;
   transition:0.35s ease;
-  clip-path: inherit;
 }
 
 .img-inner:hover .overlay-item-gallery{
   opacity:1;
 }
 
-/* ==================================================
+/* ===============================
    BUTTON
-   ================================================== */
+================================ */
+
 .btn-show-gallery{
   width:48px;
   height:48px;
@@ -250,33 +417,36 @@
   text-decoration:none;
 }
 
-/* ==================================================
+/* ===============================
    OVERLAY TEXT
-   ================================================== */
+================================ */
+
 .overlay-item-gallery p{
-  color:#ffffff;
+  color:#fff;
   font-size:20px;
   font-weight:500;
   max-width:80%;
   text-align:center;
   opacity:0;
-  transform: translateY(10px);
+  transform:translateY(10px);
   transition:0.35s ease;
 }
 
 .img-inner:hover .overlay-item-gallery p{
   opacity:1;
-  transform: translateY(0);
+  transform:translateY(0);
 }
 
-/* ==================================================
-   PRODUCT NAME
-   ================================================== */
+/* ===============================
+   PRODUCT TEXT
+================================ */
+
 .product-name{
   margin-top:15px;
   font-size:18px;
   color:#333;
 }
+
 .product-desc{
   margin-top:6px;
   font-size:16px;
@@ -285,245 +455,71 @@
   text-align:center;
 }
 
+/* ===============================
+   LIGHTBOX
+================================ */
+
 #simple-lightbox{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
 }
 
 #simple-lightbox img{
-  max-width: 90%;
-  max-height: 90%;
+  max-width:90%;
+  max-height:90%;
 }
 
-/* CLOSE */
 #sl-close{
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:#fff;
+  cursor:pointer;
 }
 
-/* ARROWS */
 #sl-prev,
 #sl-next{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 50px;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px;
-  user-select: none;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:50px;
+  color:#fff;
+  cursor:pointer;
+  padding:10px;
+  user-select:none;
 }
 
-#sl-prev{ left: 30px; }
-#sl-next{ right: 30px; }
+#sl-prev{left:30px;}
+#sl-next{right:30px;}
 
+/* ===============================
+   RESPONSIVE
+================================ */
 
-
-
-/* ==================================================
-   VERY SMALL DEVICES (0px – 319px)
-   ================================================== */
-@media (max-width: 319px){
-  .catering-gallery{
-    padding: 25px 8px;
-  }
-
+@media (max-width:575px){
   .gallery-grid{
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .product-name{
-    font-size: 14px;
-  }
-
-  .product-desc{
-    font-size: 13px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 13px;
+    grid-template-columns:1fr;
+    gap:20px;
   }
 }
 
-/* ==================================================
-   MOBILE SMALL (320px – 479px)
-   ================================================== */
-@media (min-width: 320px) and (max-width: 479px){
-  .catering-gallery{
-    padding: 30px 10px;
-  }
-
+@media (min-width:576px) and (max-width:991px){
   .gallery-grid{
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .product-name{
-    font-size: 15px;
-  }
-
-  .product-desc{
-    font-size: 14px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 14px;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
   }
 }
 
-/* ==================================================
-   MOBILE LARGE (480px – 575px)
-   ================================================== */
-@media (min-width: 480px) and (max-width: 575px){
+@media (min-width:1400px){
   .gallery-grid{
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .btn-show-gallery{
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
+    max-width:1400px;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
   }
 }
-
-/* ==================================================
-   TABLET PORTRAIT (576px – 767px)
-   ================================================== */
-@media (min-width: 576px) and (max-width: 767px){
-  .catering-gallery{
-    padding: 40px 15px;
-  }
-
-  .gallery-grid{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .product-name{
-    font-size: 16px;
-  }
-
-  .product-desc{
-    font-size: 15px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 16px;
-  }
-}
-
-/* ==================================================
-   TABLET LANDSCAPE (768px – 991px)
-   ================================================== */
-@media (min-width: 768px) and (max-width: 991px){
-  .gallery-grid{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .product-name{
-    font-size: 17px;
-  }
-
-  .product-desc{
-    font-size: 16px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 18px;
-  }
-}
-
-/* ==================================================
-   SMALL LAPTOP (992px – 1199px)
-   ================================================== */
-@media (min-width: 992px) and (max-width: 1199px){
-  .gallery-grid{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-  }
-
-  .product-name{
-    font-size: 18px;
-  }
-}
-
-/* ==================================================
-   DESKTOP (1200px – 1399px)
-   ================================================== */
-@media (min-width: 1200px) and (max-width: 1399px){
-  .gallery-grid{
-    max-width: 1200px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .product-name{
-    font-size: 19px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 20px;
-  }
-}
-
-/* ==================================================
-   LARGE DESKTOP (1400px – 1999px)
-   ================================================== */
-@media (min-width: 1400px) and (max-width: 1999px){
-  .gallery-grid{
-    max-width: 1400px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-  }
-
-  .product-name{
-    font-size: 21px;
-  }
-
-  .product-desc{
-    font-size: 18px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 22px;
-  }
-}
-
-/* ==================================================
-   EXTRA LARGE SCREENS (2000px – 2500px)
-   ================================================== */
-@media (min-width: 2000px){
-  .gallery-grid{
-    max-width: 1800px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-  }
-
-  .product-name{
-    font-size: 28px;
-  }
-
-  .product-desc{
-    font-size: 22px;
-  }
-
-  .overlay-item-gallery p{
-    font-size: 26px;
-  }
-}
-
-
-
-/* Gallary section End image */

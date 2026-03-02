@@ -717,6 +717,19 @@
 
 
 
+/* product section start */
+
+.wrap-pic-blo1{
+  border: 2px solid #777777; 
+  box-sizing: border-box;
+}
+
+
+/* product section start */
+
+
+
+
 /* 
    Our Clients Section
  */
@@ -1187,7 +1200,7 @@
 
 .site-footer{
   position: relative;
-  background: url("") center/cover no-repeat;
+  background: url("../images/Home/Banar-2.jpg") center/cover no-repeat;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -1197,7 +1210,7 @@
 .footer-overlay{
   position: absolute;
   inset: 0;
-  background: rgba(1, 20, 34, 0.90);
+  background: rgba(1, 20, 34, 0.85);
   z-index: 1;
 }
 
@@ -1318,21 +1331,42 @@
   color: #003A66;
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
-
 /* =========================
    FOOTER BOTTOM
 ========================= */
+
 .footer-bottom{
   position: relative;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: 10px;
   padding: 20px;
   text-align: center;
   font-size: 14px;
-  background: rgba(0,0,0,0.25);
+
+  background: rgba(0, 0, 0, 0.25);
   opacity: 0.85;
+
+  /* top thin white border */
+  border-top: 1px solid rgba(255, 255, 255, 1);
+
+  /* text color */
+  color: #ffffff;
 }
 
+/* Design by text */
+.footer-bottom .design-by{
+  color:#ffffff;
+}
+
+/* Footer link */
+.footer-bottom a{
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover{
+  text-decoration: underline;
+}
 /* =========================
    RESPONSIVE
 ========================= */
@@ -1393,4 +1427,15 @@
   .footer-social {
     gap: 10px;
   }
+}
+
+
+/* ===============================
+   PRODUCT DROPDOWN ACTIVE LINK
+================================ */
+
+.product-dropdown a.active{
+
+  color:#ff0000;
+  font-weight:500;
 }
