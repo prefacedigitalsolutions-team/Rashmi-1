@@ -90,7 +90,7 @@
 .wrap-pic-delicious {
   position: relative;
   margin-top: 80px;
-  right: -30px;          /* 👈 image ko right side push */
+  right: -30px;      
 }
 
 /* Image styling */
