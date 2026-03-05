@@ -32,7 +32,7 @@
 .wrap-menu-header {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 75px;
   background: #ffffff;
   z-index: 100;
   border-top: 5px solid #dd2828;
@@ -53,8 +53,66 @@
 
 /* Logo */
 .logo img {
-  max-height: 70px;
+  max-height: 53px;
+ 
 }
+
+/* Heading under logo
+.logo-heading {
+  text-align: center; 
+  font-size: 21px;  
+  color: #d13737;       
+  margin-top: 2px;   
+  font-weight: 400;  
+  text-transform: capitalize;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ */
+
+
+ /* Heading next to logo */
+
+.logo-heading {
+  font-size: 25px;  
+  color: #d13737;
+  margin-left: 120px;  
+  margin-top: -28px;    
+  font-weight: 400;  
+  text-transform: capitalize;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .wrap_header {
+    flex-direction: row;      
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .logo-heading {
+    font-size: 20px;
+    margin-left: 50px;      
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+/* Extra small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 45px;         
+  }
+
+  .logo-heading {
+    font-size: 18px;
+    margin-left: 110px; 
+    margin-top: -24px;  
+    font-size: 20px;    
+  }
+}
+
+
 
 /* ================= MENU ================= */
 .main_menu {
@@ -467,7 +525,7 @@
 @media (max-width: 576px) {
 
   .wrap-menu-header {
-    padding: 8px 0;
+    padding: 1px 0;
   }
 
   .logo img {
