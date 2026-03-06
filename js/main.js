@@ -472,3 +472,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+// Done galary section
