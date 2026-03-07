@@ -125,16 +125,17 @@
 }
 
 .company-card h4 {
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 10px;
   color: #ff0000;
+   text-transform: uppercase;
 }
 
 .company-card p {
   margin: 16px 0;
   font-size: 15px;
   color: #333;
-  text-transform: uppercase;
+ 
 }
 
 /* Social Links with Icons */
