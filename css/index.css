@@ -781,7 +781,14 @@
   border: 1px solid rgba(119,119,119,0.2);
   box-sizing: border-box;
 }
+.wrap-text-blo1{
+    text-align: center;
+}
 
+.wrap-text-blo1 h4{
+    font-size: 17px;
+    font-weight: 500;
+}
 
 /* product section start */
 
