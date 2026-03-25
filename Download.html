@@ -84,6 +84,7 @@
                         <a href="Cutlery-solutions.html">Cutlery solutions</a>
                         <a href="Fryer-Baskets.html">Fryer Baskets</a>
                         <a href="Fruit-Veditable.html">Fruit & Vegetable Basket</a>
+                        <a href="Onion-potato.html">Onion & Potato Trolley</a>
 
                     <!-- 6th item heading 
                     <div class="has-sub-dropdown clickable">
@@ -140,48 +141,76 @@
 
 
  <!--pdf download section start-->
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <section class="pdf-download-section">
 
-  <h2 class="pdf-heading">Download PDFs</h2>
+  <h2 class="pdf-heading">Our Catalogue & Price List</h2>
 
-  
-      <img src="images/Download-contact/Download-Banar.jpg" 
-           alt="Rashmi Catalogue" 
-           class="pdf-thumb">
+  <div class="pdf-grid">
 
-      <!-- Direct Download Link -->
-      <a href="images/Download-contact/pdf.pdf" 
-         download="Rashmi-Catalogue.pdf"
-         class="pdf-download-btn">
+    <!-- PDF 1 -->
+    <div class="pdf-card">
+      <div class="pdf-preview">
+        <img src="images/Download-contact/download-catalogue.jpg" alt="">
+        <div class="pdf-badge">PDF</div>
+      </div>
 
-        <i class="fa-solid fa-file-pdf pdf-icon"></i>
-        Download
-      </a>
+      <div class="pdf-bottom">
+        <p>Product Catalogue</p>
+        <a href="images/Download-contact/RPI-Catalogue-Pdf.pdf" download>Download</a>
+      </div>
+    </div>
+
+    <!-- PDF 2 -->
+    <div class="pdf-card">
+      <div class="pdf-preview">
+        <img src="images/Download-contact/Download-Banar.jpg" alt="">
+        <div class="pdf-badge">PDF</div>
+      </div>
+
+      <div class="pdf-bottom">
+        <p>Price List</p>
+        <a href="images/Download-contact/price-list.pdf" download>Download</a>
+      </div>
     </div>
 
   </div>
+
 </section>
 
+
+
+
 <script>
-const pdfCards = document.querySelectorAll('.pdf-card');
+/* ===== Scroll Animation ===== */
+const cards = document.querySelectorAll('.pdf-card');
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  },
-  {
-    threshold: 0.2
-  }
-);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
 
-pdfCards.forEach(card => observer.observe(card));
+cards.forEach(card => observer.observe(card));
+
+/* ===== Force Download ===== */
+document.querySelectorAll('.pdf-download-btn').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const fileUrl = this.getAttribute('href');
+    const fileName = fileUrl.split('/').pop();
+
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+});
 </script>
 
 	
@@ -279,6 +308,7 @@ pdfCards.forEach(card => observer.observe(card));
         <li><span>📞</span> +91-9810033390</li>
         <li><span>📞</span> +91-9818562634</li>
         <li><span>✉️</span>  rashmiplasticoat@gmail.com</li>
+         <li><span>✉️</span>  gautammacker@hotmail.com</li>
         <li><span>🌐</span>  www.rashmiplasticoat.com<br><br></li>
       </ul>
 </div>
